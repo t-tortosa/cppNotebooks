@@ -20,4 +20,14 @@ for file in ./index.ipynb */*.ipynb; do
     mv ${fname}.html html/$dir
 done
 
+for file in */*.cpp; do
+    echo $file
+
+    dir=$(dirname "${file}")
+    if [ ! -d html/$dir ]; then
+        mkdir html/$dir
+    fi
+    cpp $file html/$dir/$(basename "${file}")
+done
+
 cp -R img html
