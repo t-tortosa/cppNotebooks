@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>intro</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>stl</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14259,10 +14259,10 @@ a.anchor-link {
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-c++"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;stdio.h&quot;</span><span class="cp"></span>
+<div class=" highlight hl-c++"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 </pre></div>
 
      </div>
@@ -14273,170 +14273,59 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Rappel-du-langage-C">Rappel du langage C<a class="anchor-link" href="#Rappel-du-langage-C">&#182;</a></h1>
+<h1 id="La-librarie-standard---STL">La librarie standard - STL<a class="anchor-link" href="#La-librarie-standard---STL">&#182;</a></h1>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Le langace C++ est une extension du langage C, afin que celui-ci réponde à la notion de programmation orientée objet. Il est donc essentiel de maîtriser les bases du langages C avant de commencer l'apprentissage du C++. Ce cours intègre ici un chapitre de rappel sur le langage C.</p>
+<p>En plus des fonctionnalités de base du C++ il existe une libraire disponible sur tout les systèmes implémentant de nombreux objets. Il s'agit de la <a href="https://fr.wikipedia.org/wiki/Standard_Template_Library">STL</a>.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Les-variables-et-types-de-donn&#233;es">Les variables et types de donn&#233;es<a class="anchor-link" href="#Les-variables-et-types-de-donn&#233;es">&#182;</a></h2>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Les variables sont les outils permettant de stocker les données. Il existe plusieurs types de données que l'on souhaite stocker :<br><br></p>
-<dl>
-  <dt>Les nombres entiers :</dt>
-  <dd>
-      Les types de données ci-après permettent de stocker des nombres entiers :
-      <ul>
-      <li><b>int</b> : stockés sur 16, 32 ou 64 bits en fonction des plate-formes</li>
-      <li><b>long</b> : stockés sur 32 ou 64 bits</li>
-      <li><b>short</b> : stockés sur 16 bits</li>
-      </ul>
-      Le mot clé <b>unsigned</b> peut être ajouté afin de définir une variable forcément positive. Si le mot <b>unsigned</b> est utilisé seul, il définit une variable de type <b>unsigned int</b>.
-      </dd><br>
-    <dt> Les nombres flottants :</dt>    
-  <dd>Les types de données ci après permettent de stocker des nombres flottant : 
-      <ul>
-      <li><b>float</b></li>
-      <li><b>double</b></li>
-      <li><b>long double</b></li>
-      </ul>    
-      Utiliser un type <b>long double</b> permet d'avoir plus de précision qu'un type <b>float</b>.
-  </dd><br>
-  <dt>Les caractères</dt>
-    <dd>Le type de donnée utilisé pour stocker un caractère est le <b>char</b></dd>
-</dl>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>La déclaration d'une variable (de type int par exemple) se faire de la manière suivante :</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-c++"><pre><span></span><span class="kt">int</span> <span class="n">ma_variable</span><span class="p">;</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img href="../img/caution.png"></img>
-<font color="green">Pour l'instant, que contient ma variable ?</font>
-On ne le sait pas !</p>
-<p>Pour éviter maitriser le contenu de la variable, il est possible de l'initialiser à sa déclaration :</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-c++"><pre><span></span><span class="kt">int</span> <span class="n">var</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Les-op&#233;rateurs">Les op&#233;rateurs<a class="anchor-link" href="#Les-op&#233;rateurs">&#182;</a></h2>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Plusieurs opérateurs sont disponibles afin de permettre de réaliser des calculs à partir des variables : 
-Les différents types d'opérateurs disponibles sont les suivants : <br><br></p>
-<dl>
-  <dt>Les opérateurs arithmétiques :</dt>
-  <dd>
-      <ul>
-      <li><b>+</b> : addition</li>
-      <li><b>-</b> : soustraction</li>
-      <li><b>*</b> : multiplication</li>
-      <li><b>/</b> : division</li>
-      </ul>
-      </dd><br>
-    <dt>Les opérateurs de comparaison</dt>
-    <ul>
-      <li><b><</b> : inférieur à</li>
-      <li><b>></b> : supérieur à</li>
-      <li><b><=</b> : inférieur ou égal à</li>
-      <li><b>>=</b> : supérieur ou égal à</li>
-      <li><b>==</b> : égal à</li>
-      <li><b>!=</b> : différent de</li>
-      </ul>    
-      Ces opérateurs ont la particularité de retourner systèmatiquement un entier à 1 dans le cas ou la condition est vraie, à 0 sinon.</dd> <br><br>
-  <dt>Les opérateurs logiques</dt>
-    <dd>
-    <ul>
-      <li><b>&&</b> : "AND" logique</li>
-      <li><b>||</b> : "OR" logique</li>
-    </ul>
-    Ces opérateurs permettent souvent de combiner les résultats des opérateurs de comparaison</dd><br>
-  <dt>Les opérateurs bits à bits</dt>
-    <dd>
-    <ul>
-      <li><b>&</b> : "AND" bit à bit</li>
-      <li><b>|</b> : "OR" bit à bit</li>
-    </ul>
-    Ces opérateurs permettent de réaliser des opération bits à bits entre les variables</dd><br>
-      <dt>Les opérateurs d'incréments</dt>
-    <dd>
-    <ul>
-      <li><b>++</b> : incrémente une variable de 1</li>
-      <li><b>--</b> : décrémente une variable de 1</li>
-    </ul>
-</dd>
-</dl>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Les opérateurs d'incréments ont une particularité :</p>
+<p>Nous avons déjà utilisé plusieurs de ces objets :</p>
 <ul>
-    <li><b>var++</b> signifie que la variable var sera incrémentée après l'exécution de la ligne</li>
-    <li><b>++var</b> signifie que la variable var sera incrémentée avant l'exécution de la ligne</li>
+    <li>Les <b>string</b></li>
+    <li>Les <b>stream</b> : à travers l'utilisation de std::cin et std::cout </li>
 </ul>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Exemple :</p>
+<p>Le site <a href="http://www.cplusplus.com/doc/">cplusplus.com</a> réfère l'ensemble des fonctionnalités. Il est presque constamment ouvert lorsque vous codez !</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Ici nous allons aborder quelques classes de base utilisées qu'implémente la librairie. La plupart des fonctionnalités de la STL ne seront pas abordées dans ce chapitre, il s'agira de chercher par soi même.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="string">string<a class="anchor-link" href="#string">&#182;</a></h2>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Comme nous l'avons vu précédemment, la classe <a href="http://www.cplusplus.com/reference/string/string/?kw=string">string</a> permet de représenter des chaines de caractères.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Tout d'abord, il faut importer le header de la classe <b>string</b> :</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-c++"><pre><span></span><span class="kt">int</span> <span class="n">increment_var</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Pendant l&#39;incrémentation 1 : %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">increment_var</span><span class="o">++</span><span class="p">);</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Après l&#39;incrémentation 1   : %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">increment_var</span><span class="p">);</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Pendant l&#39;incrémentation 2 : %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">++</span><span class="n">increment_var</span><span class="p">);</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Après l&#39;incrémentation 2   : %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">increment_var</span><span class="p">);</span>
+<div class=" highlight hl-c++"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
 </pre></div>
 
      </div>
@@ -14444,61 +14333,129 @@ Les différents types d'opérateurs disponibles sont les suivants : <br><br></p>
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Pendant l&#39;incrémentation 1 : 0
-Après l&#39;incrémentation 1   : 1
-Pendant l&#39;incrémentation 2 : 2
-Après l&#39;incrémentation 2   : 2
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Les-fonctions">Les fonctions<a class="anchor-link" href="#Les-fonctions">&#182;</a></h2>
+<p>Pour déclarer et initialiser un <b>string</b>, on utilise la syntaxe suivante :</p>
+
 </div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Une fonction est un bloc programme pouvant être appelé depuis un autre endroit dans le programme.
-La déclaration d'une fonction se fait de la manière suivante :
-<img title="Déclaration d'une fonction en langage C" src="../img/function.png" width="600"></img></p>
-<ul>
-    <li><i>type</i> est le type du résultat de la fonction </li>
-<li>Le <i>corpus</i> contient l'ensemble des instructions à effectuer dans la fonction</li>
-    <li>Si une fonction renvoie un résultat, il doit y avoir au moins une instruction <i>return <b>expr</b></i></li>
-</ul>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-c++"><pre><span></span><span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">;</span>
+<div class=" highlight hl-c++"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">mot</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;Un mot&quot;</span><span class="p">);</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>L'affichage se fait simplement à l'aide de <i>std::cout</i></p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">mot</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>On peut aussi initialiser un <b>string</b> de la manière suivante :</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="n">mot</span> <span class="o">=</span> <span class="s">&quot;Un autre mot&quot;</span><span class="p">;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">mot</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>La concaténation est implémentée à l'aide de l'opérateur <b>+</b> :</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">mot2</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot; et le mot 2&quot;</span><span class="p">);</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">mot</span> <span class="o">+</span> <span class="n">mot2</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Les caractères de la chaine sont accessibles individuellement à l'aide de l'opérateur <b>[]</b> ou de la méthode <b>at</b>.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">counter</span> <span class="o">&lt;</span> <span class="n">mot</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">counter</span> <span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">mot</span><span class="p">[</span><span class="n">counter</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 <span class="p">}</span>
-
-<span class="kt">int</span> <span class="n">value_a</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> 
-<span class="kt">int</span> <span class="n">value_b</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Somme de a et de b : %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">add</span><span class="p">(</span><span class="n">value_a</span><span class="p">,</span> <span class="n">value_b</span><span class="p">));</span>
 </pre></div>
 
      </div>
@@ -14506,38 +14463,496 @@ La déclaration d'une fonction se fait de la manière suivante :
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>La méthode <a href="http://www.cplusplus.com/reference/string/string/substr/"><b>substr</b></a> permet d'extraire un morceau de la chaine de caractère :</p>
 
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">mot</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">mot</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;autre&quot;</span><span class="p">))</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</pre></div>
 
-<div class="jp-OutputArea jp-Cell-outputArea">
+     </div>
+</div>
+</div>
+</div>
 
-<div class="jp-OutputArea-child">
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Les-conteneurs">Les conteneurs<a class="anchor-link" href="#Les-conteneurs">&#182;</a></h2>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Les conteneurs sont des objets permettentant de stocker plusieurs d'objets.</p>
 
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Ci-après trois exemples de conteneurs en C++ :</p>
+<ul>
+    <li><a href="http://www.cplusplus.com/reference/vector/vector/?kw=vector"><b>vector</b></a> : Implémentation des FILO</li>
+    <li><a href="http://www.cplusplus.com/reference/queue/queue/?kw=queue"><b>queue</b></a> : Implémentation des FIFO</li>
+    <li><a href="http://www.cplusplus.com/reference/list/list/?kw=list"><b>list</b></a>  : Implémentation des listes chaînées</li>
+</ul>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Pour des raisons d'optimisation, le choix du conteneur est important.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Nous allons ici détailler l'utilisation du vecteur. Il s'agit du conteneur le plus utilisé.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>La classe vector est définie dans le header <b>vector</b>.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Reprenons dans un premier temps la classe <b>Point</b></p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="k">class</span> <span class="nc">Point</span> <span class="p">{</span>
+    <span class="k">public</span><span class="o">:</span>
+
+    <span class="n">Point</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="o">:</span> <span class="n">x</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">y</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="p">{}</span>
+    <span class="n">Point</span><span class="p">()</span> <span class="o">:</span> <span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">y</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">{}</span>
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <span class="n">Point</span> <span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="k">const</span> <span class="n">Point</span> <span class="o">&amp;</span> <span class="n">point</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Point</span> <span class="n">result</span><span class="p">;</span>
+        <span class="n">result</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">point</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">x</span><span class="p">;</span>
+        <span class="n">result</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">point</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">y</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="n">Point</span> <span class="k">operator</span><span class="o">-</span><span class="p">(</span><span class="k">const</span> <span class="n">Point</span> <span class="o">&amp;</span> <span class="n">point</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Point</span> <span class="n">result</span><span class="p">;</span>
+        <span class="n">result</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">point</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+        <span class="n">result</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="n">point</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+    <span class="p">}</span>
+        
+    <span class="kt">void</span> <span class="k">operator</span><span class="o">+=</span><span class="p">(</span><span class="k">const</span> <span class="n">Point</span> <span class="o">&amp;</span> <span class="n">point</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">x</span> <span class="o">+=</span> <span class="n">point</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+        <span class="n">y</span> <span class="o">+=</span> <span class="n">point</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="kt">void</span> <span class="k">operator</span><span class="o">-=</span><span class="p">(</span><span class="k">const</span> <span class="n">Point</span> <span class="o">&amp;</span> <span class="n">point</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">x</span> <span class="o">-=</span> <span class="n">point</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+        <span class="n">y</span> <span class="o">-=</span> <span class="n">point</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="kt">bool</span> <span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span> <span class="n">Point</span> <span class="o">&amp;</span> <span class="n">a</span><span class="p">){</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="n">a</span><span class="p">.</span><span class="n">x</span> <span class="o">&amp;&amp;</span> <span class="n">y</span><span class="o">==</span><span class="n">a</span><span class="p">.</span><span class="n">y</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="kt">void</span> <span class="n">afficherPoint</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Point de coordonnées [&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">y</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;]&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="kt">float</span> <span class="n">x</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Somme de a et de b : 9
-</pre>
+     </div>
 </div>
 </div>
-
 </div>
 
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="n">Point</span> <span class="nf">a</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">b</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">c</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">d</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
 </div>
 
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><br><br>
-Nous avons revu les bases simples de la programmation en langage C. La suite concerne les notions avancées en langage C.</p>
+<p>Nous allons maintenant créer un vecteur de points :</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Point</span><span class="o">&gt;</span> <span class="n">pointList</span><span class="p">;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Initialement, le vecteur est vide. Il existe plusieurs moyen de le vérifier :</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Taille du vecteur : &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">pointList</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Le vecteur est-il vide ? &quot;</span> <span class="o">&lt;&lt;</span> <span class="p">((</span><span class="n">pointList</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="o">?</span><span class="s">&quot;oui&quot;</span><span class="o">:</span><span class="s">&quot;non&quot;</span><span class="p">)</span><span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Pour ajouter un élément à la fin de la liste, on utilise la méthode <b>push_back</b>.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="n">pointList</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+<span class="n">pointList</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+<span class="n">pointList</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+<span class="n">pointList</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">d</span><span class="p">);</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><b>pop_back</b> permet de supprimer un élément de la liste</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="n">pointList</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>On peut alors parcourir la liste à l'aide de l'opérateur <b>[]</b> ou de la méthode <b>at</b> :</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">counter</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">counter</span> <span class="o">&lt;</span> <span class="n">pointList</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">counter</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">pointList</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">counter</span><span class="p">).</span><span class="n">afficherPoint</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Pour réinitialiser le vector, on utilise la méthode <b>clear</b> :</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="n">pointList</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Le vecteur est-il vide ? &quot;</span> <span class="o">&lt;&lt;</span> <span class="p">((</span><span class="n">pointList</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="o">?</span><span class="s">&quot;oui&quot;</span><span class="o">:</span><span class="s">&quot;non&quot;</span><span class="p">)</span><span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Il existe aussi un objet appelé itérateur permettant de parcourir un conteneur à la manière des pointeurs. Il s'agit de l'<b>itérateur</b>.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="n">pointList</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+<span class="n">pointList</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+<span class="n">pointList</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+<span class="n">pointList</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">d</span><span class="p">);</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Point</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">it</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="n">it</span> <span class="o">=</span> <span class="n">pointList</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">pointList</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="n">it</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">it</span><span class="o">-&gt;</span><span class="n">afficherPoint</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Il s'agit plus ou moins d'un pointeur sur un vecteur de point, qu'on incrémente à chaque tour de boucle.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div style="float:left"><a href="../Introduction/Jupyter.html">Précedent : Introduction - Jupyter</a></div><div style="float:right"><a href="preprocesseur.html">Suivant : Rappels du langage C - Le préprocesseur</a></div>
+<h2 id="Ecriture-et-lecture-dans-un-fichier">Ecriture et lecture dans un fichier<a class="anchor-link" href="#Ecriture-et-lecture-dans-un-fichier">&#182;</a></h2>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Les classes permettant de lire et d'écrire dans un fichier sont comprises dans le header <a href="http://www.cplusplus.com/reference/fstream/"><i>fstream</i></a>. Il s'agit de <i>flux</i>, comme <b>cin</b> et <b>cout</b>.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>La classe <a href="http://www.cplusplus.com/reference/fstream/ofstream/"><b>ofstream</b></a> permet d'écrire dans un fichier de la manière suivante :</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="c1">// Le constructeur peut prendre en paramètre le nom du fichier sur lequel on souhaite écrire</span>
+<span class="n">std</span><span class="o">::</span><span class="n">ofstream</span> <span class="n">outputFile</span><span class="p">(</span><span class="s">&quot;NomDuFichier.txt&quot;</span><span class="p">);</span>
+
+<span class="c1">// L&#39;écriture se fait ensuite de la même manière qu&#39;avec le flux std::cout</span>
+<span class="n">outputFile</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Ecriture dans le fichier&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="n">outputFile</span> <span class="o">&lt;&lt;</span> <span class="mi">456</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="c1">// La fermeture du fichier peut se faire à l&#39;aide de la méthode close ou du destructeur</span>
+<span class="n">outputFile</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Par ailleurs, la classe <a href="http://www.cplusplus.com/reference/fstream/ifstream/"><b>ifstream</b></a> permet de lire un fichier de la manière suivante :</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="c1">// Le constructeur peut prendre en paramètre le nom du fichier que l&#39;on souhaite lire</span>
+<span class="n">std</span><span class="o">::</span><span class="n">ifstream</span> <span class="n">inputFile</span><span class="p">(</span><span class="s">&quot;NomDuFichier.txt&quot;</span><span class="p">);</span>
+
+<span class="c1">// La lecture peut se faire à l&#39;aide de plusieurs opérateurs / méthodes</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">text</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">getline</span><span class="p">(</span><span class="n">inputFile</span><span class="p">,</span> <span class="n">text</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">number</span><span class="p">;</span>
+<span class="n">inputFile</span> <span class="o">&gt;&gt;</span> <span class="n">number</span><span class="p">;</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Text : &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">text</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Number : &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">number</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Exceptions">Exceptions<a class="anchor-link" href="#Exceptions">&#182;</a></h2>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Il est possible de lancer et d'intercepter ce que l'on appelle des <a href="http://www.cplusplus.com/reference/exception/exception/"><b>exceptions</b></a> en C++. Commençons par inclure le header concerné :</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;exception&gt;</span><span class="cp"></span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Il est possible de signaler au programme qu'il s'est passé un événement exceptionnel. Par exemple, on souhaite développer une fonction de division prenant deux arguments, un numérateur et un dénominateur. On choisira alors de lancer une exception dans la cas d'une division par 0. Ceci s'écrira de la manière suivante :</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="kt">double</span> <span class="nf">div</span><span class="p">(</span><span class="kt">double</span> <span class="n">num</span><span class="p">,</span> <span class="kt">double</span> <span class="n">denom</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">denom</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// On lance une exception de type domain_error (domaine mathématique) avec </span>
+        <span class="c1">// le message &quot;Division par zéro&quot;</span>
+        <span class="k">throw</span> <span class="n">std</span><span class="o">::</span><span class="n">domain_error</span><span class="p">(</span><span class="s">&quot;Division par zéro&quot;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">num</span> <span class="o">/</span> <span class="n">denom</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><b>domain_error</b> est une exception implémentée par la STL visant à signaler une exception mathématique. La page <a href="http://www.cplusplus.com/reference/exception/exception/"><b>exceptions</b></a> décrit les différentes exceptions implémentées par la STL. Il est également possible de dériver soit même la classe <a href="http://www.cplusplus.com/reference/exception/exception/"><b>exception</b></a> afin d'implémenter sa propre exception.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>L'interception des exceptions se fait alors de la manière suivante :</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="c1">// Dans ce bloc de code, il y a des chances qu&#39;une exception soit levée</span>
+<span class="k">try</span> <span class="p">{</span>
+    <span class="n">div</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">exception</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span> <span class="p">{</span><span class="c1">// Récupération de l&#39;exception</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Exception caught: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">e</span><span class="p">.</span><span class="n">what</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span> <span class="c1">// Affichage du message de l&#39;exception</span>
+<span class="p">}</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h2>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Nous avons apperçu plusieurs fonctionnalités de la STL. Il en existe bien d'autre et le meilleur moyen de travailler avec la STL et d'utiliser au maximum la <a href="http://www.cplusplus.com">documentation</a>.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div style="float:left"><a href="../4-Programmation_orientée_objet_et_langage_Cpp/genericite.html">Précedent : La POO avec le C++ - <br>La généricité</a></div><div style="float:right"><a href="cpp11.html">Suivant : Notions avancées - <br>Le C++ 11</a></div>
 </div>
 </div>
 </body>
